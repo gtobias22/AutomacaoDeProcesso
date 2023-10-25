@@ -43,10 +43,10 @@ tabela = pd.read_csv("produtos.csv")
 #9. Cadastro dos produtos. Como iremos cadastrar uma base de dados inteira, colocamos essa ação dentro de um,
 #Loop de repetição, para cadastrar todos os nossos produtos.
 
-# Tabela.index retorna o indice da linha da base de dados
-# Então para cada linha dentro da nossa tabela, temos um índice associada a ela e utilizamos isso para encontrar,
-# o valor que estamos buscando.
-for linha in tabela.index:
+'''Tabela.index retorna o indice da linha da base de dados
+   Então para cada linha dentro da nossa tabela, temos um índice associada a ela e utilizamos isso para encontrar,
+   o valor que estamos buscando.
+   for linha in tabela.index:'''
 
     #Clicando no primeiro campo - código
     pyautogui.click(x=1756, y=264)
@@ -54,9 +54,9 @@ for linha in tabela.index:
 
     # Cadastrando produtos
 
-    # Utilizamos o método "loc" da nossa tabela que é um DataFrame do pandas, para localizarmos dentro da,
-    # nossa base de dados o valor exato que iremos cadastrar no campo.
-    # Nesse método, passamos a linha(index) e a coluna que esta aquela informação.
+    ''' Utilizamos o método "loc" da nossa tabela que é um DataFrame do pandas, para localizarmos dentro da,
+    nossa base de dados o valor exato que iremos cadastrar no campo.
+    Nesse método, passamos a linha(index) e a coluna que esta aquela informação.'''
 
     #Preenchendo o campo "Código"
     pyautogui.write(str(tabela.loc[linha, "codigo"]))
